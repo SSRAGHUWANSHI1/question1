@@ -1,5 +1,8 @@
 # question1
 solution
+
+showing console just for make sure there is no warning or error !!
+
 Onloading it looks like 
 ![image](https://github.com/SSRAGHUWANSHI1/question1/assets/108659012/aed1d324-974b-4ce3-8058-b5cc219d30f6)
 
