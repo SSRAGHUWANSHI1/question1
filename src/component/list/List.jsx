@@ -9,8 +9,7 @@ import styles from "./List.module.css";
 const List = ({ rows, timestamps, selectedCurrency, onSelectRow}) => {
 
   const handleRowClick = (orderId) => {
-    onSelectRow(orderId)
-    console.log("Selected order id:", orderId);
+    onSelectRow(orderId);
   };
 
   return (
@@ -25,8 +24,8 @@ const List = ({ rows, timestamps, selectedCurrency, onSelectRow}) => {
         </ListHeader>
       </thead>
       <tbody>
-        {rows.map((row) => (
-          <ListRow key={row["&id"]} onClick={() => handleRowClick(row["&id"])}>
+        {rows.map((row, index) => (
+          <ListRow onClick={() => handleRowClick(row["&id"])} key={index}>
             <ListRowCell>{row["&id"]}</ListRowCell>
             <ListRowCell>{row.executionDetails.buySellIndicator}</ListRowCell>
             <ListRowCell>{row.executionDetails.orderStatus}</ListRowCell>
